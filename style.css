@@ -7,10 +7,18 @@ html, body {
   align-items: center;  
   flex-direction: column;  
   text-align: center;  
+  background-image: url('/media/images/sculpture_selfie.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text_box {
+  margin-top: -100px;
 }
 
 canvas {
   display: block;
-  margin: 20px auto;
+  margin-top: 200px;
   max-width: 90vw;
 }
