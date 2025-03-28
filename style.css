@@ -7,7 +7,7 @@ html, body {
   align-items: center;  
   flex-direction: column;  
   text-align: center;  
-  background-color: (207,226,243);
+  background-color:#cfe2f3;
 }
 
 .text_box {
@@ -17,4 +17,14 @@ html, body {
 canvas {
   display: block;
   max-width: 90vw;
+}
+
+button {
+  background-color: #cfe2f3;  
+  color: black;  
+  font-size: 16px;
+  padding: 10px 20px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
 }
