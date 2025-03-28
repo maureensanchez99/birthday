@@ -11,9 +11,8 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, 600);
 
-  let vw = windowWidth / 2;
   button = createButton("Happy Birthday");
-  button.position(vw, 300);  
+  button.position(windowWidth / 2 - button.width / 2, 300);  
   button.mousePressed(() => {
     Tone.start();
     samples.player("bday").start();
@@ -21,5 +20,18 @@ function setup() {
 }
 
 function draw() {
-  background(bgImg);
+  let imgAspect = bgImg.width / bgImg.height;
+  let newWidth = width;
+  let newHeight = newWidth / imgAspect;
+
+  if (newHeight > height) {
+    newHeight = height;
+    newWidth = newHeight * imgAspect;
+  }
+
+  imageMode(CENTER);
+  background(255);   
+  image(bgImg, width / 2, height / 2, newWidth, newHeight);   
+
+  button.position(windowWidth / 2 - button.width / 2, 300);
 }
