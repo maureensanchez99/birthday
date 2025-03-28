@@ -1,7 +1,13 @@
+let samples, button1, bgImg;
+
+function preload(){
+  bgImg = loadImage("media/images/nola_group.jpg");
+}
+
 function setup() {
-  createCanvas(windowWidth, 400);
+  createCanvas(windowWidth, 600);
 }
 
 function draw() {
-  background(220);
+  background(bgImg);
 }
